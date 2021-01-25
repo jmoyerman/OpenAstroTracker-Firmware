@@ -74,7 +74,7 @@
   #define RA_SLEW_MICROSTEPPING 8         // The (default) microstep mode used for slewing RA axis
   #define RA_TRACKING_MICROSTEPPING 8     // The fine microstep mode for tracking RA axis
 #elif (RA_DRIVER_TYPE == DRIVER_TYPE_A4988_GENERIC) || (RA_DRIVER_TYPE == DRIVER_TYPE_TMC2209_STANDALONE)
-  #define RA_SLEW_MICROSTEPPING 8         // Microstep mode set by MS pin strapping. Use the same microstep mode for both slewing & tracking   
+  #define RA_SLEW_MICROSTEPPING 256         // Microstep mode set by MS pin strapping. Use the same microstep mode for both slewing & tracking   
   #define RA_TRACKING_MICROSTEPPING RA_SLEW_MICROSTEPPING   
 #elif (RA_DRIVER_TYPE == DRIVER_TYPE_ULN2003)
   #define RA_SLEW_MICROSTEPPING 2         // The (default) half-step mode used for slewing RA axis
@@ -87,7 +87,7 @@
   #define DEC_SLEW_MICROSTEPPING  16  // The (default) microstep mode used for slewing DEC
   #define DEC_GUIDE_MICROSTEPPING 16  // The fine microstep mode used for guiding DEC only
 #elif (DEC_DRIVER_TYPE == DRIVER_TYPE_A4988_GENERIC) || (DEC_DRIVER_TYPE == DRIVER_TYPE_TMC2209_STANDALONE)
-  #define DEC_SLEW_MICROSTEPPING  16  // Only UART drivers support dynamic switching. Use the same microstep mode for both slewing & guiding
+  #define DEC_SLEW_MICROSTEPPING  256  // Only UART drivers support dynamic switching. Use the same microstep mode for both slewing & guiding
   #define DEC_GUIDE_MICROSTEPPING DEC_SLEW_MICROSTEPPING
 #elif (DEC_DRIVER_TYPE == DRIVER_TYPE_ULN2003)
   #define DEC_SLEW_MICROSTEPPING   2  // Runs in half-step mode always

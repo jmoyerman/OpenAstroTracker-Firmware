@@ -36,7 +36,7 @@
   #define RA_STEP_PIN 2  // STEP
 #endif
 #ifndef RA_DIR_PIN
-  #define RA_DIR_PIN  4  // DIR
+  #define RA_DIR_PIN  5  // DIR
 #endif
 #ifndef RA_EN_PIN
   #define RA_EN_PIN   26  // Enable
@@ -138,7 +138,7 @@
   #define LCD_PIN5 5              // LCD DB5 pin
 #endif
 #ifndef LCD_PIN6
-  #define LCD_PIN6 6              // LCD DB6 pin
+  #define LCD_PIN6 29              // LCD DB6 pin
 #endif
 #ifndef LCD_PIN7
   #define LCD_PIN7 7              // LCD DB7 pin

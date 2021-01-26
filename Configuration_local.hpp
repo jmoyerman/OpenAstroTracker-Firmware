@@ -36,10 +36,10 @@
  */
 #define RA_DRIVER_TYPE      DRIVER_TYPE_A4988_GENERIC
 #define DEC_DRIVER_TYPE     DRIVER_TYPE_A4988_GENERIC
-#define RA_STEPPER_SPEED          400   // Max. Speed = 600 for 28BYJ-48 and 3000 for NEMA17. Defaults = 400 for 28BYJ-48 and 1200 for NEMA17
-#define RA_STEPPER_ACCELERATION   600   // Defaults: 600 for 28BYJ-48, 6000 for NEMA17
-#define DEC_STEPPER_SPEED          600   // Max. Speed = 600 for 28BYJ-48 and 3000 for NEMA17. Defaults = 600 for 28BYJ-48 and 1300 for NEMA17
-#define DEC_STEPPER_ACCELERATION   600   // Defaults: 600 for 28BYJ-48, 6000 for NEMA17
+#define RA_STEPPER_SPEED          3000   // Max. Speed = 600 for 28BYJ-48 and 3000 for NEMA17. Defaults = 400 for 28BYJ-48 and 1200 for NEMA17
+#define RA_STEPPER_ACCELERATION   6000   // Defaults: 600 for 28BYJ-48, 6000 for NEMA17
+#define DEC_STEPPER_SPEED          3000   // Max. Speed = 600 for 28BYJ-48 and 3000 for NEMA17. Defaults = 600 for 28BYJ-48 and 1300 for NEMA17
+#define DEC_STEPPER_ACCELERATION   6000   // Defaults: 600 for 28BYJ-48, 6000 for NEMA17
 
 // TMC2209 UART settings
 // These settings work only with TMC2209 in UART connection (single wire to TX)

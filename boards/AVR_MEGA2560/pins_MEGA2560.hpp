@@ -33,10 +33,10 @@
 #endif
 // DRIVER_TYPE_TMC2209_UART requires 4 digital pins in Arduino pin numbering
 #ifndef RA_STEP_PIN
-  #define RA_STEP_PIN 2  // STEP
+  #define RA_STEP_PIN 25  // STEP
 #endif
 #ifndef RA_DIR_PIN
-  #define RA_DIR_PIN  5  // DIR
+  #define RA_DIR_PIN  26  // DIR
 #endif
 #ifndef RA_EN_PIN
   #define RA_EN_PIN   26  // Enable
@@ -65,10 +65,10 @@
 #endif
 // DRIVER_TYPE_TMC2209_UART requires 4 digital pins in Arduino pin numbering
 #ifndef DEC_STEP_PIN
-  #define DEC_STEP_PIN 3  // STEP
+  #define DEC_STEP_PIN 25  // STEP
 #endif
 #ifndef DEC_DIR_PIN
-  #define DEC_DIR_PIN  6  // DIR
+  #define DEC_DIR_PIN  26  // DIR
 #endif
 #ifndef DEC_EN_PIN
   #define DEC_EN_PIN   27  // Enable
@@ -129,7 +129,7 @@
 
 // DISPLAY_TYPE_LCD_KEYPAD requires 6 digital & 1 analog output in Arduino pin numbering
 #ifndef LCD_BRIGHTNESS_PIN
-  #define LCD_BRIGHTNESS_PIN 10   // Brightness PWM control (#undef to disable)
+  #undef LCD_BRIGHTNESS_PIN // 10   // Brightness PWM control (#undef to disable)
 #endif
 #ifndef LCD_PIN4
   #define LCD_PIN4 4              // LCD DB4 pin
@@ -138,7 +138,7 @@
   #define LCD_PIN5 5              // LCD DB5 pin
 #endif
 #ifndef LCD_PIN6
-  #define LCD_PIN6 29              // LCD DB6 pin
+  #define LCD_PIN6 6              // LCD DB6 pin
 #endif
 #ifndef LCD_PIN7
   #define LCD_PIN7 7              // LCD DB7 pin

@@ -1724,7 +1724,7 @@ void Mount::loop() {
 
   #if (DEBUG_LEVEL & DEBUG_MOUNT) && (DEBUG_LEVEL & DEBUG_VERBOSE)
   unsigned long now = millis();
-  if (now - _lastMountPrint > 2000) {
+  if (now - _lastMountPrint > 250) {
     LOGV2(DEBUG_MOUNT, "%s",getStatusString().c_str());
     _lastMountPrint = now;
   }

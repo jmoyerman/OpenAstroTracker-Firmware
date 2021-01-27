@@ -78,7 +78,7 @@
 #if (BOARD == BOARD_ESP32_ESP32DEV)
   #define DISPLAY_TYPE DISPLAY_TYPE_LCD_JOY_I2C_SSD1306
 #else
-  #define DISPLAY_TYPE DISPLAY_TYPE_NONE
+  #define DISPLAY_TYPE DISPLAY_TYPE_LCD_KEYPAD
 #endif
 
 /**
@@ -116,8 +116,8 @@
  * Note that enabling Bluetooth increases flash usage by about 627 kB.
  */
 #define BLUETOOTH_ENABLED 0 
-#define BLUETOOTH_DEVICE_NAME "OpenAstroTracker"
+#define BLUETOOTH_DEVICE_NAME "the0Josh OAT"
 
-#define DEBUG_LEVEL 0
+#define DEBUG_LEVEL DEBUG_ANY
 
 // #define DEBUG_LEVEL (DEBUG_MEADE | DEBUG_SERIAL)

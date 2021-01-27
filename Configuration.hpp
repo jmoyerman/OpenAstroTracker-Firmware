@@ -520,7 +520,7 @@
 #if (DISPLAY_TYPE == DISPLAY_TYPE_NONE) || (DISPLAY_TYPE == DISPLAY_TYPE_LCD_KEYPAD_I2C_MCP23008) || (DISPLAY_TYPE == DISPLAY_TYPE_LCD_KEYPAD_I2C_MCP23017)
   // No dedicated pins required apart from I2C
 #elif (DISPLAY_TYPE == DISPLAY_TYPE_LCD_KEYPAD)
-  #if !defined(LCD_BRIGHTNESS_PIN) || !defined(LCD_PIN4) || !defined(LCD_PIN5) || !defined(LCD_PIN6) || !defined(LCD_PIN7)  || !defined(LCD_PIN8) || !defined(LCD_PIN9)
+  #if !defined(LCD_PIN4) || !defined(LCD_PIN5) || !defined(LCD_PIN6) || !defined(LCD_PIN7)  || !defined(LCD_PIN8) || !defined(LCD_PIN9)
      // Required pin assignments missing
      #error Missing pin assignments for configured DISPLAY_TYPE_LCD_KEYPAD display
   #endif

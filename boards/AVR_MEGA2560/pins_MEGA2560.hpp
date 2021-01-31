@@ -55,10 +55,10 @@
 #endif    
 // DRIVER_TYPE_TMC2209_UART requires 2 additional digital pins for SoftwareSerial, can be shared across all drivers
 #ifndef RA_SERIAL_PORT_TX
-  #define RA_SERIAL_PORT_TX 14 // SoftwareSerial TX port
+  #define RA_SERIAL_PORT_TX 50 // SoftwareSerial TX port
 #endif
 #ifndef RA_SERIAL_PORT_RX
-  #define RA_SERIAL_PORT_RX 15 // SoftwareSerial RX port
+  #define RA_SERIAL_PORT_RX 52 // SoftwareSerial RX port
 #endif
 #ifndef RA_DRIVER_ADDRESS
   #define RA_DRIVER_ADDRESS 0b00  // Set by MS1/MS2. LOW/LOW in this case
@@ -87,13 +87,13 @@
 #endif
 // DRIVER_TYPE_TMC2209_UART requires 2 additional digital pins for SoftwareSerial, can be shared across all drivers
 #ifndef DEC_SERIAL_PORT_TX
-  #define DEC_SERIAL_PORT_TX 14 // SoftwareSerial TX port
+  #define DEC_SERIAL_PORT_TX 51 // SoftwareSerial TX port
 #endif
 #ifndef DEC_SERIAL_PORT_RX
-  #define DEC_SERIAL_PORT_RX 15 // SoftwareSerial RX port
+  #define DEC_SERIAL_PORT_RX 53 // SoftwareSerial RX port
 #endif
 #ifndef DEC_DRIVER_ADDRESS
-  #define DEC_DRIVER_ADDRESS 0b01  // Set by MS1/MS2 (MS1 HIGH, MS2 LOW)
+  #define DEC_DRIVER_ADDRESS 0b00  // Set by MS1/MS2 (MS1 HIGH, MS2 LOW)
 #endif
 
 // DRIVER_TYPE_ULN2003 requires 4 digital outputs in Arduino pin numbering

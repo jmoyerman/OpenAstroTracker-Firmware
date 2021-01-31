@@ -92,8 +92,8 @@
 #endif
 
 #if (DEC_DRIVER_TYPE == DRIVER_TYPE_TMC2209_UART)
-  #define DEC_SLEW_MICROSTEPPING  16  // The (default) microstep mode used for slewing DEC
-  #define DEC_GUIDE_MICROSTEPPING 16  // The fine microstep mode used for guiding DEC only
+  #define DEC_SLEW_MICROSTEPPING  8  // The (default) microstep mode used for slewing DEC
+  #define DEC_GUIDE_MICROSTEPPING 8  // The fine microstep mode used for guiding DEC only
 #elif (DEC_DRIVER_TYPE == DRIVER_TYPE_A4988_GENERIC) || (DEC_DRIVER_TYPE == DRIVER_TYPE_TMC2209_STANDALONE)
   #define DEC_SLEW_MICROSTEPPING  16  // Only UART drivers support dynamic switching. Use the same microstep mode for both slewing & guiding
   #define DEC_GUIDE_MICROSTEPPING DEC_SLEW_MICROSTEPPING
@@ -107,11 +107,11 @@
 // Extended TMC2209 UART settings
 // These settings work only with TMC2209 in UART connection (single wire to TX)
 #if (DEC_DRIVER_TYPE == DRIVER_TYPE_TMC2209_UART)
-  #define RA_RMSCURRENT 1200       // RMS current in mA. Warning: Peak current will be 1.414 times higher!! Do not exceed your steppers max current!
+  #define RA_RMSCURRENT 250       // RMS current in mA. Warning: Peak current will be 1.414 times higher!! Do not exceed your steppers max current!
   #define RA_STALL_VALUE 100       // adjust this value if the RA autohoming sequence often false triggers, or triggers too late
 
   #define DEC_STALL_VALUE 10    // adjust this value if the RA autohoming sequence often false triggers, or triggers too late
-  #define DEC_RMSCURRENT 1000   // RMS current in mA. Warning: Peak current will be 1.414 times higher!! Do not exceed your steppers max current!
+  #define DEC_RMSCURRENT 250   // RMS current in mA. Warning: Peak current will be 1.414 times higher!! Do not exceed your steppers max current!
   #define DEC_HOLDCURRENT 20    // [0, ... , 31] x/32 of the run current when standing still. 0=1/32... 31=32/32
   #define USE_AUTOHOME 0        // Autohome with TMC2209 stall detection:  ON = 1  |  OFF = 0   
   //                  ^^^ leave at 0 for now, doesnt work properly yet
@@ -189,7 +189,7 @@
 // INVERT AXIS
 // Set to 1 or 0 to invert motor directions
 #ifndef RA_INVERT_DIR 
-#define RA_INVERT_DIR 0 
+#define RA_INVERT_DIR 1 
 #endif
 #ifndef DEC_INVERT_DIR 
 #define DEC_INVERT_DIR 0
@@ -281,9 +281,9 @@
   #define AZ_AUDIO_FEEDBACK 0 // of the stepper coils. Use this to verify that UART is working properly. 
   #define ALT_AUDIO_FEEDBACK 0 // of the stepper coils. Use this to verify that UART is working properly.
   #define AZ_STALL_VALUE 10    // adjust this value if the RA autohoming sequence often false triggers, or triggers too late
-  #define AZ_RMSCURRENT 1000   // RMS current in mA. Warning: Peak current will be 1.414 times higher!! Do not exceed your steppers max current!
+  #define AZ_RMSCURRENT 250   // RMS current in mA. Warning: Peak current will be 1.414 times higher!! Do not exceed your steppers max current!
   #define ALT_STALL_VALUE 10    // adjust this value if the RA autohoming sequence often false triggers, or triggers too late
-  #define ALT_RMSCURRENT 1000   // RMS current in mA. Warning: Peak current will be 1.414 times higher!! Do not exceed your steppers max current!
+  #define ALT_RMSCURRENT 250   // RMS current in mA. Warning: Peak current will be 1.414 times higher!! Do not exceed your steppers max current!
 
 #endif
 
@@ -362,7 +362,7 @@
     #define GPS_SERIAL_PORT Serial2 // TODO: Resolve potential conflict with RA_SERIAL_PORT & DEC_SERIAL_PORT
     #define GPS_BAUD_RATE 9600
   #elif defined(__AVR_ATmega2560__)
-    #define GPS_SERIAL_PORT Serial1
+    #define GPS_SERIAL_PORT Serial2
     #define GPS_BAUD_RATE 9600
   #endif
 #endif

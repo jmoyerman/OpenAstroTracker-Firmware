@@ -79,8 +79,8 @@
 // We plan to re-instate fine modes in a future release, but this will require a significant rework of the implementation.
 //
 #if (RA_DRIVER_TYPE == DRIVER_TYPE_TMC2209_UART)
-  #define RA_SLEW_MICROSTEPPING 8         // The (default) microstep mode used for slewing RA axis
-  #define RA_TRACKING_MICROSTEPPING 8     // The fine microstep mode for tracking RA axis
+  #define RA_SLEW_MICROSTEPPING 16         // The (default) microstep mode used for slewing RA axis
+  #define RA_TRACKING_MICROSTEPPING 16     // The fine microstep mode for tracking RA axis
 #elif (RA_DRIVER_TYPE == DRIVER_TYPE_A4988_GENERIC) || (RA_DRIVER_TYPE == DRIVER_TYPE_TMC2209_STANDALONE)
   #define RA_SLEW_MICROSTEPPING 8         // Microstep mode set by MS pin strapping. Use the same microstep mode for both slewing & tracking   
   #define RA_TRACKING_MICROSTEPPING RA_SLEW_MICROSTEPPING   
@@ -92,8 +92,8 @@
 #endif
 
 #if (DEC_DRIVER_TYPE == DRIVER_TYPE_TMC2209_UART)
-  #define DEC_SLEW_MICROSTEPPING  8  // The (default) microstep mode used for slewing DEC
-  #define DEC_GUIDE_MICROSTEPPING 8  // The fine microstep mode used for guiding DEC only
+  #define DEC_SLEW_MICROSTEPPING  16  // The (default) microstep mode used for slewing DEC
+  #define DEC_GUIDE_MICROSTEPPING 16  // The fine microstep mode used for guiding DEC only
 #elif (DEC_DRIVER_TYPE == DRIVER_TYPE_A4988_GENERIC) || (DEC_DRIVER_TYPE == DRIVER_TYPE_TMC2209_STANDALONE)
   #define DEC_SLEW_MICROSTEPPING  16  // Only UART drivers support dynamic switching. Use the same microstep mode for both slewing & guiding
   #define DEC_GUIDE_MICROSTEPPING DEC_SLEW_MICROSTEPPING
@@ -107,11 +107,11 @@
 // Extended TMC2209 UART settings
 // These settings work only with TMC2209 in UART connection (single wire to TX)
 #if (DEC_DRIVER_TYPE == DRIVER_TYPE_TMC2209_UART)
-  #define RA_RMSCURRENT 250       // RMS current in mA. Warning: Peak current will be 1.414 times higher!! Do not exceed your steppers max current!
+  // #define RA_RMSCURRENT 250       // RMS current in mA. Warning: Peak current will be 1.414 times higher!! Do not exceed your steppers max current!
   #define RA_STALL_VALUE 100       // adjust this value if the RA autohoming sequence often false triggers, or triggers too late
 
   #define DEC_STALL_VALUE 10    // adjust this value if the RA autohoming sequence often false triggers, or triggers too late
-  #define DEC_RMSCURRENT 250   // RMS current in mA. Warning: Peak current will be 1.414 times higher!! Do not exceed your steppers max current!
+ // #define DEC_RMSCURRENT 250   // RMS current in mA. Warning: Peak current will be 1.414 times higher!! Do not exceed your steppers max current!
   #define DEC_HOLDCURRENT 20    // [0, ... , 31] x/32 of the run current when standing still. 0=1/32... 31=32/32
   #define USE_AUTOHOME 0        // Autohome with TMC2209 stall detection:  ON = 1  |  OFF = 0   
   //                  ^^^ leave at 0 for now, doesnt work properly yet

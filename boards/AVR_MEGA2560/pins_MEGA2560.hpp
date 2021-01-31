@@ -93,7 +93,7 @@
   #define DEC_SERIAL_PORT_RX 53 // SoftwareSerial RX port
 #endif
 #ifndef DEC_DRIVER_ADDRESS
-  #define DEC_DRIVER_ADDRESS 0b00  // Set by MS1/MS2 (MS1 HIGH, MS2 LOW)
+  #define DEC_DRIVER_ADDRESS 0b11  // Set by MS1/MS2 (MS1 HIGH, MS2 LOW)
 #endif
 
 // DRIVER_TYPE_ULN2003 requires 4 digital outputs in Arduino pin numbering
